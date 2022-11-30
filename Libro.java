@@ -1,33 +1,45 @@
+package Constructor;
 
 public class Libro {
 
-	// atributos
 	private String titulo;
-	private int numeroEjemplares;
+	private int numeroEjemplar;
 	private double precio;
-	
-	// constructor con 3 parámetros
-	public Libro(String titulo, int numeroEjemplares, double precio) {
+
+	// Constructor con 3 parámetros
+	public Libro(String titulo, int numeroEjemplar, double precio) {
 		this.titulo = titulo;
-		this.numeroEjemplares = numeroEjemplares;
+		this.numeroEjemplar = numeroEjemplar;
 		this.precio = precio;
 	}
-	
-	// Devuelve una cadena de caracteres con el estado del libro
+
 	public String obtenerEstado() {
-		return
-			"Libro [ítulo = " + titulo + ", NumeroEjemplares = " + numeroEjemplares + "Precio = " + precio + String.format("%.2f", precio) + "]";
+		return "Libro [ Título = " + titulo + ", NúmeroEjemplares = " + numeroEjemplar + ", Precio = "
+				+ String.format("%.2f", precio) + "]";
 	}
-	
-	// Devuelve el titulo del libro
+
 	public String getTitulo() {
 		return titulo;
 	}
-	
-	// Modifica el titulo del libro
+
+	public int getNumeroEjemplar() {
+		return numeroEjemplar;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	
-	
+
+	public void setNumeroEjemplar(int numeroEjemplar) {
+		this.numeroEjemplar = numeroEjemplar;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
 }
